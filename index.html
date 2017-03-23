@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Jim+Nightshade" rel="stylesheet">
+  </head>
+  <body>
+    <script type="text/template" id="wrapper-template">
+      <div class="wrapper">
+        
+        <ul class="item-list"></ul>
+      </div>
+    </script>
+    <script type="text/template" id="list-template">
+      <% for (var i = 0; i < data.length; i++) {%>
+        <li class="task">
+          <span class="task_text"><%= data[i] %></span>
+          <input type="text" class="edit_task">
+          <span class="save_btn">Save</span>
+          <span class="edit_btn">Edit</span>
+          <span class="delete_btn">Delete</span>
+        </li>
+        <% };%>
+      </script>
+
+      <div class="controls">
+          <span class="todo">ToDo List</span>
+          <input type="text" class="item-value">
+          <button class="add_btn">Add New Task</button>
+        
+
+    <script data-main="js/main" src="js/require.js"></script>
+  </body>
+</html>
